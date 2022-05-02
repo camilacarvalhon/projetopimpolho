@@ -1,0 +1,90 @@
+
+@media (max-width: 575.98px) { 
+    .elipseBlue img{
+        max-width: 80%;
+    }
+    
+    .img-logo img{
+        width: 300px;
+    }
+
+    .mainAcesso{
+        margin-top: .6rem!important;
+        display: inline;
+        justify-content:space-around;
+    }
+    .elipseYellow img{
+        max-width: 25%;
+     }
+     
+    .mainAcesso .botoes a{
+        padding: .5em .2em!important;
+        font-size: 1.2rem;
+        font-family:'Poppins';
+    }
+
+    h3{
+        font-size: 1.7rem!important;
+    }
+     
+    .img-barco{
+        position: relative;
+        left: 10rem;
+        width:40%;
+        margin-top: 1rem!important;
+    }
+
+     #estudante a, #professor a{
+        width: 200px;
+        border-radius: 10px;
+        border: 0;
+        color: #ffff;
+    }
+    .elipseRed img{
+        width: 100%;
+    }
+    
+    .coqueiro img{
+        width: 78%;
+    }
+
+    .bau img{
+        width: 78%;
+    }
+
+    /* Login */
+
+    .formAcesso{
+        display: inline;
+        justify-content: space-around;
+    }
+    .form-group input {
+        padding: .2rem .1rem!important;
+        width: 200px;
+        border-radius: 10px;
+        border: 2px solid #05ABC4;
+        outline: 0;
+    }
+    .form-group label {
+        padding: .2rem .1rem!important;
+        width: 200px;
+    
+    }
+    
+    #pag_acessar_estudante a{
+        padding: .2rem .1rem!important;
+        width: 200px;
+        border-radius: 10px;
+        border: 0;
+        color: #ffff;
+        background-color: #05ABC4;
+    }
+
+    .elipseRedlogin img{
+        width: 0%;
+    }
+    .elipseRedlogin{
+        margin-top: 2rem!important;
+    }
+    
+}

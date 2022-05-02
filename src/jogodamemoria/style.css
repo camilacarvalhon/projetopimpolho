@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+*{
+    margin: 0!important;
+    padding: 0!important;
+}
+ #nav_info{
+    background-color: black; 
+    font-family: 'Sniglet', cursive;   
+   
+}
+
+/* Color logo */
+p{
+    font-size: 25pt;
+    padding: 2rem;
+
+}
+#nav_info #p1{
+    color: yellow;
+}
+#nav_info #p2{
+    color: green;
+}
+#nav_info #p3{
+    color: #05ABC4;
+}
+#nav_info #p4{
+    color: red;
+}
+
+#nav_info a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    margin-block-start: 30rem;
+}
+
+#jogo {
+    width: 40rem;
+    text-align: center;
+    margin-left: 4rem!important;
+}
+#jogo h2{
+    font-weight: bold;
+}
+#jogo img{
+    width: 110px;
+    height: 130px;
+    border-style: solid;
+    border-color: #05ABC4;
+    border-radius: 20px;
+    margin-bottom: 2rem!important ;
+}
+
+#jogo #rodape button{
+    background-color: #05ABC4;
+    padding:.7rem!important;
+    margin-bottom: 2rem!important;
+    margin-top: 2.5rem!important;
+    font-size: 15pt;
+} 
+
+
+#jogo #pInfo{
+    font-family: 'Sniglet', cursive;
+    font-size: 15pt;
+}
+
+#palavra h2{
+    font-weight: bold;
+}

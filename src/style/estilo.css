@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Sniglet&display=swap');
+
+* { margin: 0 !important;
+    padding: 0 !important; 
+}
+
+/* Página tipo de usuário */
+
+/* css do header de acesso */
+.pg_acesso{
+    margin: auto 0;
+}
+
+.headerAcesso {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elipseBlue img{
+    max-width: 80%;
+    height: auto;
+}
+
+.img-logo{
+  margin: auto 0;
+}
+
+.img-logo img{
+    width: 80%;
+}
+
+/* css do main de acesso */
+
+.mainAcesso{
+    display: flex;
+    justify-content:space-between;
+}
+
+h3, p{
+    color:#4D5E77;
+}
+
+.elipseYellow img{
+   max-width: 85%;
+}
+
+.mainAcesso .botoes a{
+    padding: .5em .2em!important;
+    font-size: 1.2rem;
+    font-family:'Poppins';
+}
+
+.img-barco{
+    width:20%;
+}
+
+
+#estudante a, #professor a{
+    width: 300px;
+    border-radius: 10px;
+    border: 0;
+    color: #ffff;
+}
+
+#estudante a{
+    background-color: #013563;
+}
+
+
+#professor a{
+    background-color: #05ABC4;
+}
+
+/*css do footer de acesso  */
+#footerAcesso{
+    display: flex;
+    justify-content: space-between;
+}
+
+.elipseRed img{
+    width: 100%;
+}
+
+#coqueiro img{
+    width: 78%;
+}
+
+#bau img{
+    width: 78%;
+}
+
+/* Página Login */
+.formAcesso{
+    display: flex;
+    justify-content: space-between;
+}
+.form{
+    text-align: center;
+}
+.form-group input {
+    padding: .5rem .3rem!important;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #05ABC4;
+    outline: 0;
+}
+.form-group label {
+    padding: .5rem .3rem!important;
+    width: 300px;
+
+}
+
+#pag_acessar_estudante a{
+    padding: .5rem .3rem!important;
+    width: 300px;
+    border-radius: 10px;
+    border: 0;
+    color: #ffff;
+    background-color: #05ABC4;
+}
+
+#cadastrar a, #voltar a, #recuperar a{
+    color: #05ABC4;
+}
+
+.elipseRedlogin img{
+    width: 50%;
+}
+.elipseRedlogin{
+    margin-top: 2rem!important;
+}
+
+/* Modal de atualizar senha */
+
+#minha_caixa input {
+    padding: .5rem ;
+    margin: 0.6rem;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid #05ABC4;
+    outline: 0;
+    align-items: center;
+
+}
+
+
+/* Tela de acesso professor */
+#img-logomini img{
+    width: 170px;
+}
+
+#relatorio h3{
+    font-size: 1.3rem;
+}
+
+#relatorio input{
+padding: .2rem ;
+margin-top: 0.6rem;
+width: 300px;
+border-radius: 10px;
+border: 2px solid #05ABC4;
+outline: 0;
+align-items: center;
+}
+
+#relatorio button{
+    background-color: #05ABC4;
+    border-radius: 7px;
+    border: 0;
+    color: #ffff;
+    width: 80px;
+    padding: .2rem ;
+}
+
+/* Logout */
+
+.logout img{
+    width: 50px;
+}
+
+.sectionThree {
+    margin-top: 150px!important;
+}
+
+
