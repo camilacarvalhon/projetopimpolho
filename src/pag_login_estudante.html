@@ -21,108 +21,99 @@
   
 </head>
 <body>
-
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4" >
-                <div id="elipseBlue">
-                    <img src="assets/elipseBlue.svg" alt=""  >
+        <header class="row" >
+            <div class="col-lg-12 col-xs-8 col-sm-8 col-md-10 headerAcesso">
+                <div class="elipseBlue">
+                    <img src="assets/elipseBlue.svg" class=" img-fluid" alt="" >
+                </div>
+                <div class="nlw mt-5">
+                    <img src="assets/nwls.png"  class=" img-fluid" alt=""  >
+                </div>
+                <div class="text-end me-2 mt-2 img-logo">
+                    <picture>
+                        <source media="(max-width:550px)" srcset="assets/logoMini.svg">
+                        <source media="(min-width:769px)" srcset="assets/logo.svg">
+                        <img src="assets/logoMini.svg" class=" img-fluid" alt="imagem da logo" >
+                    </picture>
                 </div>
             </div>
-            <div class="col-4 mt-5  text-center" >
-                <img src="assets/nwls.png" alt=""  >
-            </div>
-            <div class="col-4 text-end" >
-                <div id="img-logo">
-                    <img src="assets/logo.svg" alt="" >
-                </div>
-            </div>
-        </div>
+        </header>
 
-        <div class="row mt-2">
+        <main class="row mt-4">
+            <div class="col-lg-12 col-xs-8 col-sm-8 col-md-10 formAcesso">
+                <div class="coreslogin">
+                    <div class="elipseYellow">
+                        <img src="assets/elipseYellow.svg" alt="imagem círculo amarelo"  >
+                    </div> 
+                    <div class="elipseRedlogin" id="elipseRedlogin">
+                        <img src="assets/elipseRed.svg" class=" img-fluid" alt="imagem círculo vermelho"  >
+                    </div>
+                </div>
+                
+                <form class="form" >
+                    <h3 class="text-center">Espaço do Estudante</h3>
+                    <div class="form-group">
+                        <label for="emailprof">Digite seu email:*</label><br>
+                        <input type="email" name="text" id="emailprof"  >
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaprof">Digite sua senha:*</label><br>
+                        <input type="password" name="text" id="senhaprof" >
+                    </div>
+                    <div id="pag_acessar_estudante" class="mt-3">
+                        <a class="btn" onclick="acessar()">Acessar</a>
+                    </div>
 
-            <div class="col-4">
-                <div id="elipseYellow" class="mt-4">
-                    <img src="assets/elipseYellow.svg" alt=""  >
-                </div> 
-            </div>
+                    <div id="cadastrar" class="  text-center">
+                        <a href="pag_cadastro_professor.html">Cadastrar</a>
+                    </div>
+    
+                    <div id="recuperar" class="text-center">
+                        <a href="#" onclick="recuperar()">Recuperar Senha</a>
+                    </div>
 
-            <div class="col-4">
-                <h3 class="text-center">Espaço do Estudante</h3>
-                <div id="form" class="text-center">
-                    <label for="" >Digite seu email:*</label><br>
-                    <input type="text" name="text" id="email"><br>
-                    <label for="">Senha:*</label><br>
-                    <input type="text" name="text" id="senha" >
-                </div>
-                <div id="pag_acessar_estudante" class="mb-2 p-3 text-center">
-                    <a class="btn  btn-sm" onclick="acessar()">Acessar</a>
-                    <!-- href="pag_acessar_estudante.html" -->
-                </div>
-                <div id="cadastrar" class="  text-center">
-                    <a href="pag_cadastro_estudante.html">Cadastrar</a>
-                </div>
-
-                <div id="recuperar" class="text-center">
-                    <a href="#" onclick="recuperar()">Recuperar Senha</a>
-                </div>
-                <div id="voltar" class="  text-center mt-2">
-                    <a href="index.html">Voltar</a>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div id="img-barco" class="text-center">
+                    <div id="voltar" class="  text-center mt-2">
+                        <a href="index.html">Voltar</a>
+                    </div>
+                </form>
+                <div class="img-barco text-center">
                     <img src="assets/barco.svg" alt=""  >
                 </div>
             </div>
-        </div>
+        </main>
 
-        <div class="row mt-5">
-            <div class="col-2">
-                <div id="elipseRed">
-                    <img src="assets/elipseRed.svg" alt=""  >
+        <footer class="row mt-5 ">
+            <div class="col-lg-12 col-xs-8 col-sm-8 col-md-10" id="footerAcesso">
+                <div id="coqueiro " class="text-end">
+                    <img src="assets/coqueiro.png" class=" img-fluid" alt=""  >
+                </div>
+                <div id="bau">
+                    <img src="assets/bau.svg" class=" img-fluid" alt=""  >
                 </div>
             </div>
-
-            <div class="col-6">
-                <div id="coqueiro" class="text-start">
-                    <img src="assets/coqueiro.png" alt=""  >
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div id="bau"class="text-end me-3">
-                    <img src="assets/bau.svg" alt=""  >
-                </div>
-            </div>
-        </div>
-    
-
+        </footer>
     <!-- Modal -->
-    <div class="modal" tabindex="-1" id="minha_caixa">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Esqueceu sua senha? Relaxe</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal " tabindex="-1" id="minha_caixa" >
+            <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-header m-2 ">
+                <h5 class="modal-title">Esqueceu sua senha? Relaxe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body m-2 ">
+                    <label for="email_recup">Digite seu email:*</label><br>
+                    <input type="email" name="text" id="email_recup" class="mt-2 p-1"><br>
+                </div>
+                <div class="modal-footer " >
+                <button type="button" class="btn btn-secondary ps-3 pe-3 m-2 " data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary ps-3 pe-3 m-2" onclick="atualizar_senha_professor()" >Salvar</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <label for="email_recup">Digite seu email:*</label><br>
-                <input type="text" name="text" id="email_recup"><br>
-                <label for="email_recup">Código da aluno:*</label><br>
-                <input type="number" name="number" id="codigo_recup"><br>
-                <label for="">Nova senha:*</label><br>
-                <input type="text" name="text" id="senha_recup" >
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary" onclick="atualizar_senha()">Salvar</button>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
     <!-- /Modal -->
+    </div>
+    
 </body>
 </html>
