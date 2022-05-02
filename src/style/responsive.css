@@ -53,6 +53,13 @@
     }
 
     /* Login */
+    .form{
+        text-align: center;
+        
+    }
+    .form-group{
+        text-align: center;
+    }
 
     .formAcesso{
         display: inline;

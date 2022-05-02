@@ -89,13 +89,17 @@ h3, p{
     width: 78%;
 }
 
-/* Página Login */
+/*################################## Página Login ###################################### */
 .formAcesso{
     display: flex;
     justify-content: space-between;
 }
 .form{
     text-align: center;
+    align-items: center;
+}
+.form-group{
+    text-align: left;
 }
 .form-group input {
     padding: .5rem .3rem!important;
