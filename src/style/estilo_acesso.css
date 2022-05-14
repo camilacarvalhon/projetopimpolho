@@ -1,0 +1,187 @@
+/*################################## Página Acesso ###################################### */
+/*
+=============== 
+Sidebar
+===============
+*/
+
+body {
+    background-image: url('/src/assets/capa_acesso.svg');
+    background-repeat: no-repeat;
+}
+
+.headerAcesso {}
+
+.openbtn {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    width: 55px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #DDDDDD;
+    color: #000;
+    padding: 10px 15px;
+    margin-right: 20px;
+    border: none;
+    border-radius: .3rem;
+}
+
+.openbtn:hover {
+    background-color: #CCCCCC;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 200px !important;
+    position: relative;
+    right: 5px;
+    z-index: 1;
+    top: 5px;
+    background-color: #DDDDDD;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: gray;
+    background-color: #CCCCCC;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    ;
+    font-size: 36px;
+    margin-left: 20px;
+}
+
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+/*End Sidebar*/
+
+/* Inicio Main página acesso estudante */
+main {
+    position: relative;
+    width: 900px !important;
+    margin: 0 auto !important;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardJogo {
+    width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fim Main página acesso estudante */
+
+.cardJogo .cardConteudo {
+    width: 100px;
+    height: 96px;
+    background-color: #FFFFFF;
+    border-radius: 40rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardJogo .cardConteudo .cardConteudoJogo {
+    height: 83px;
+    width: 82px;
+    border-radius: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardJogo:first-child .cardConteudo .cardConteudoJogo {
+    background-color: #038E00;
+}
+.cardJogo:nth-child(2) .cardConteudo .cardConteudoJogo{
+    background-color: #A80202;
+}
+.cardJogo .card-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.cardJogo .card-titulo p{
+    font: 1.2rem 'Sniglet', cursive ;
+    color:#000;
+    text-transform: uppercase;
+}
+.footerPaginaAcessar{
+    display: flex;
+    flex-direction: row;
+}
+.buttonsFooter{
+    display: flex;
+}
+
+.buttonsFooter .buttonDica, .buttonSom, .buttonHome{
+    background-color: #DDDDDD;
+    height: 60px;
+    width: 80px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+
+}
+.buttonsFooter .buttonDica:hover, .buttonSom:hover, .buttonHome:hover{
+    color: gray;
+    background-color: #CCCCCC;
+}
+
+.buttonsFooter img{
+    height: 50px;
+    width: 70px;
+}
+
+.logout{
+    position: absolute!important;
+    right: 0;
+    margin: 0 auto;
+}
