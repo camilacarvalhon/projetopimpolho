@@ -17,23 +17,36 @@
 
 <body>
     <div class="container-fluid">
-        <nav id="nav_info">
-            <div class="row ">
-                <div class="col-9">
-                    <p class="p-3 ">
-                        <span id="p1">Pi</span><span id="p2">mp</span><span id="p3">ol</span><span id="p4">ho</span>
-                    </p>
+        <header class="headerAcesso ">
+            <div class="img-logomini">
+                <img src="./assets/logoMini.svg" alt="imagem da logo">
+            </div>
+            <div class="sideBar m-2">
+                <div class="testeBotao text-end">
+                    <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img src="./assets/menu.svg" alt="">
+                    </button>
                 </div>
-                <div class="col-1 pt-4  text-end">
-                    <a href="#section_sobre" id="sobre">About</a>
-                </div>
-                <div class="col-2 pt-4 text-center">
-                    <a href="#section_sobre" id="apresentacao">Apresentação</a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <div class="tituloSidebar ms-5">
+                            <h5 id="offcanvasRightLabel">Nome</h5>
+                        </div>
+                        <button type="button" class=" text-reset m-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <img src="./assets/fechar.svg" alt="fechar">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="text-center">
+                            <li>Ano/Turma: 3º Ano</li>
+                            <li> Jogo da memória</li>
+                            <li> Jogo da memória</li>
+                            <li> Jogo da memória</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <section id="section_sobre" class="m-3 text-justify">
-        </section>
+        </header>
         <section id="section_jogo">
             <div class="row">
                 <div class="col-8">

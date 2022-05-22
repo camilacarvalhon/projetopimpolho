@@ -1,10 +1,4 @@
 /*################################## Página Acesso ###################################### */
-/*
-=============== 
-Sidebar
-===============
-*/
-
 body {
     background-image: url('/src/assets/capa_acesso.svg');
     background-repeat: no-repeat;
@@ -12,89 +6,39 @@ body {
 
 .headerAcesso {}
 
-.openbtn {
-    position: relative;
-    top: 5px;
-    right: 5px;
-    width: 55px;
-    height: 50px;
-    font-size: 30px;
-    cursor: pointer;
+.testeBotao img {
+    height: 60px;
+    width: 59px;
     background-color: #DDDDDD;
-    color: #000;
-    padding: 10px 15px;
-    margin-right: 20px;
-    border: none;
-    border-radius: .3rem;
-}
-
-.openbtn:hover {
-    background-color: #CCCCCC;
-}
-
-
-.sidebar {
-    height: 100%;
-    width: 200px !important;
-    position: relative;
-    right: 5px;
-    z-index: 1;
-    top: 5px;
-    background-color: #DDDDDD;
-    overflow-y: hidden;
-    transition: 0.5s;
-    padding: 15px;
     border-radius: 3px;
 }
-
-.sidebar a {
-    padding: 8px 8px 8px 20px;
-    text-decoration: none;
-    font-size: 22px;
-    color: #000;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: gray;
+.testeBotao img:hover{
     background-color: #CCCCCC;
 }
+.offcanvas {
+    width: 200px!important;
+    height: 200px;
+    border-radius:10px;
+    background-color: #DDDDDD!important;
+}
+.offcanvas .offcanvas-header h5{
+    font-size: 1.2rem;
+    font-family:'Poppins';
+    color: #013563;
+}
+.offcanvas .offcanvas-header button{
+    border: none;
+    background: none;
 
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    ;
-    font-size: 36px;
-    margin-left: 20px;
 }
 
-
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-
-    .sidebar a {
-        font-size: 18px;
-    }
-}
-
-/*End Sidebar*/
 
 /* Inicio Main página acesso estudante */
-main {
+.containerJogos {
     position: relative;
     width: 900px !important;
     margin: 0 auto !important;
+    height: 68vh!important;
 }
 
 .card-container{
@@ -113,7 +57,7 @@ main {
     align-items: center;
 }
 
-/* Fim Main página acesso estudante */
+
 
 .cardJogo .cardConteudo {
     width: 100px;
@@ -152,6 +96,8 @@ main {
     color:#000;
     text-transform: uppercase;
 }
+/* Fim Main página acesso estudante */
+
 .footerPaginaAcessar{
     display: flex;
     flex-direction: row;
@@ -171,7 +117,6 @@ main {
 
 }
 .buttonsFooter .buttonDica:hover, .buttonSom:hover, .buttonHome:hover{
-    color: gray;
     background-color: #CCCCCC;
 }
 

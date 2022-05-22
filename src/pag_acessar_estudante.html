@@ -34,30 +34,35 @@
             <div class="img-logomini">
                 <img src="./assets/logoMini.svg" alt="imagem da logo">
             </div>
-            <div class="openNav">
-                <div class="buttonNav" id="main">
-                    <!-- <div class="buttonNav" id="main"></div> -->
-                    <button class="openbtn" onclick="openNav()">☰</button>
+            <div class="sideBar m-2">
+                <div class="testeBotao text-end">
+                    <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img src="./assets/menu.svg" alt="">
+                    </button>
                 </div>
-                <!-- <div id="mySidebar" class="sidebar">
-                    <div class="sidebarHeader">
-                        <h4>NOME</h4>
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <div class="tituloSidebar ms-5">
+                            <h5 id="offcanvasRightLabel">Nome</h5>
+                        </div>
+                        <button type="button" class=" text-reset m-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <img src="./assets/fechar.svg" alt="fechar">
+                        </button>
                     </div>
-
-                    <ul>
-                        <li>Nome</li>
-                        <li>1º Ano</li>
-                        <li> Jogo da memória</li>
-                        <li> Jogo da memória</li>
-                        <li> Jogo da memória</li>
-                    </ul>
-                </div> -->
+                    <div class="offcanvas-body">
+                        <ul class="text-center">
+                            <li>Ano/Turma: 3º Ano</li><hr width="90%" >
+                            <li> Jogo da memória</li><hr width="90%" >
+                            <li> Jogo da memória</li><hr width="90%" >
+                            <li> Jogo da memória</li><hr width="90%" >
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
-        <main class="">
+        <main class="containerJogos">
             <div class="card-container">
-                <div class="cardJogo">
+                <div class="cardJogo ">
                     <a href="jogodamemoria/jogo.html">
                         <div class="cardConteudo">
                             <div class="cardConteudoJogo">
