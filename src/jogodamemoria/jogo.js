@@ -1,32 +1,4 @@
-/*
- * Acessando links
- */
 
-
-//Link about
-$('#sobre').on('mousemove', function mostrar(){
-
- $('#section_sobre').text('De acordo com a Revista Appai (2020), "O jogo da memória é um verdadeiro clássico entre as brincadeiras para crianças. Mas, além de divertida, a atividade pode ser uma ótima oportunidade par especial na rotina educacional das crianças. Com o jogo da memória, se obtêm benefícios como a capacidade dedesenvolver habilidades de concentração, autonomia e confiança. "');  
- //Referência:https://www.appai.org.br/appai-educacao-revista-appai-educar-edicao-122-um-jogo-para-todas-as-disciplinas/
- 
-});
-
-$('#sobre').on('mouseout', function sair(){
-
-    $('#section_sobre').text(' ');
-});
-
-//Link apresentação
-$('#apresentacao').on('mousemove', function mostrar(){
-
-    $('#section_sobre').text(' O presente projeto foi desenvolvido por Camila Carvalho, sendo aprimoramento de um projeto anterior que realizou, a fim de cumprir com os requisitos do projeto atual.');  
-   });
-   
-   $('#apresentacao').on('mouseout', function sair(){
-   
-       $('#section_sobre').text(' ');
-   });
-   
 
 /*
  * JOGO DA MEMÓRIA
@@ -56,7 +28,7 @@ let palavras = [
     'JANELA'
 ]
 
-let back = 'imgs/pimpolho.png';
+let back = '/src/assets/logoMini.svg';
 
 //Organizando os pares dos indices 
 let armaIndice = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]

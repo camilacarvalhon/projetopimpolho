@@ -11,29 +11,12 @@
 
 /* Color logo */
 p{
-    font-size: 25pt;
+    font-size: 25px;
     padding: 2rem;
 
 }
-#nav_info #p1{
-    color: yellow;
-}
-#nav_info #p2{
-    color: green;
-}
-#nav_info #p3{
-    color: #05ABC4;
-}
-#nav_info #p4{
-    color: red;
-}
 
-#nav_info a{
-    text-decoration: none;
-    font-size: large;
-    color: white;
-    margin-block-start: 30rem;
-}
+
 
 #jogo {
     width: 40rem;
@@ -46,10 +29,12 @@ p{
 #jogo img{
     width: 110px;
     height: 130px;
+    margin-bottom: 2rem !important;
+    border-color:  #013563;
     border-style: solid;
-    border-color: #05ABC4;
     border-radius: 20px;
-    margin-bottom: 2rem!important ;
+    border-width: 0.1rem;
+   
 }
 
 #jogo #rodape button{
@@ -68,4 +53,15 @@ p{
 
 #palavra h2{
     font-weight: bold;
+}
+
+.cardJogoMemoria{
+    background-color: #FFFFFF;
+  
+}
+
+.jogoMemoria{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
