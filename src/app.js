@@ -132,6 +132,7 @@ function acessar(){
             success: function(resposta){
 
                 alert(`Usuário ${resposta.nome} está cadastrado!` );
+                window.location.href= "pag_acessar_estudante.html"
             },
             error: function(resposta) {
                 alert(`Usuário não está cadastrado!` );
@@ -171,8 +172,8 @@ app.get(
 
 //Função Acessar - realizar consulta Professor
 function acessarProfessor(){
-    let email = $('#email').val()
-    let senha = $('#senha').val()
+    let email = $('#emailprof').val()
+    let senha = $('#senhaprof').val()
 
     $.ajax(
         {
