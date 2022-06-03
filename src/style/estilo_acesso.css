@@ -16,6 +16,7 @@ body {
 }
 .testeBotao img:hover{
     background-color: #CCCCCC;
+    transition: 0.3s;
 }
 .offcanvas {
     width: 200px!important;
@@ -124,6 +125,7 @@ body {
 }
 .buttonsFooter .buttonDica:hover, .buttonSom:hover, .buttonHome:hover{
     background-color: #CCCCCC;
+    transition: 0.3s;
 }
 
 .buttonsFooter img{
@@ -168,10 +170,10 @@ body {
         top: 300px;
     }
 
-    .buttonsFooter{
+    /* .buttonsFooter{
         margin: auto!important;
     }
-    
+     */
     .buttonsFooter .buttonDica, .buttonSom, .buttonHome{
         background-color: #DDDDDD;
         height: 60px;
