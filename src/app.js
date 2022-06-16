@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const pg = require('pg');
+const auth= require('./auth.js')
 
 const app = express();
 app.use(cors());
@@ -34,8 +35,12 @@ client.connect();
 function enviarEstudante() {
     let nome = $('#nome').val()
     let email = $('#email').val()
-    let senha = $('#senha').val()
+    let senha = auth($('#senha').val())
     let anoturma = $('#anoturma').val()
+
+    
+
+   
     $.ajax(
         {
             type: 'POST',
@@ -48,7 +53,6 @@ function enviarEstudante() {
             }),
             contentType: 'application/json',
             success: function (resposta) {
-                alert(`Usuário cadastrado!`);
                 window.location.href = "pag_login_estudante.html"
             }
         }

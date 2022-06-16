@@ -12,30 +12,34 @@ p{
 .section_jogo{
     display: flex;
 }
-
-.card-container{
+.cardNContainer{
     width: 940px;
-    padding: 20px;
-    display:flex ;
+    display: flex ;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
-.card-container .card{
-    position: relative;
+
+.cardNContainer .jogoCard{
+    display: flex;
+}
+
+.cardNContainer .jogoCard .card{
     padding: 10px;
     width: 105px;
     height: 105px;
-    margin: 10px;
+    margin: 6px!important;
     border: 1px solid #013563;
     border-radius: 20px;
     overflow: hidden;
     transition: 0.5s;
+    cursor: url('/src/assets/cursorBlue.png'), auto;
 }
-.card-container .card img{
+.cardNContainer .jogoCard .card img{
     width: 105px;
     height: 105px;
+   
 }
+
 #palavra h2{
     font-family: 'Sniglet', cursive;
     font-size: 30px;
@@ -59,7 +63,7 @@ p{
     font-family: 'Sniglet', cursive;
     background-color: #05ABC4;
     padding:.5rem!important;
-    margin-bottom: 2rem!important;
+    margin-bottom: .5rem!important;
     margin-top: .2rem!important;
     font-size: 15pt;
 }
@@ -67,3 +71,4 @@ p{
     opacity: .8;
     transition: 0.5s;
 }
+

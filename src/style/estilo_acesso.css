@@ -5,7 +5,8 @@ body {
 }
 
 .headerAcesso {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .testeBotao img {

@@ -6,43 +6,28 @@
 
 /* Página tipo de usuário */
 
-/* css do header de acesso */
-.pg_acesso{
-    margin: auto 0;
-}
 
-.headerAcesso {
-    display: flex;
-    justify-content: space-between;
-}
-
-.elipseBlue img{
-    max-width: 80%;
-    height: auto;
-}
-
-.img-logo{
-  margin: auto 0;
-}
+/* .headerAcesso{
+    position: relative;
+    right: 0;
+} */
 
 .img-logo img{
-    width: 80%;
+    width: 30%;
 }
 
 /* css do main de acesso */
 
 .mainAcesso{
-    display: flex;
-    justify-content:space-between;
+   
+    justify-content:center;
+    margin-top: 8rem!important;
 }
 
 h3, p{
     color:#4D5E77;
 }
 
-.elipseYellow img{
-   max-width: 85%;
-}
 
 .mainAcesso .botoes a{
     padding: .5em .2em!important;
@@ -50,14 +35,10 @@ h3, p{
     font-family:'Poppins';
 }
 
-.img-barco{
-    width:20%;
-}
-
 
 #estudante a, #professor a{
     width: 300px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 0;
     color: #ffff;
 }
@@ -77,34 +58,35 @@ h3, p{
     justify-content: space-between;
 }
 
-.elipseRed img{
-    width: 100%;
-}
-
-#coqueiro img{
-    width: 78%;
-}
-
-#bau img{
-    width: 78%;
-}
-
 /*################################## Página Login ###################################### */
+.headerLogin {
+    position: relative;
+    right: 0;
+}
+
+
+.img-logo-login  img{
+    width: 30%;
+}
 .formAcesso{
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    display: block;
+    
 }
 .form{
     text-align: center;
-    align-items: center;
+    
 }
 .form-group{
+    text-align: center;
+}
+.form-group label{
     text-align: left;
 }
 .form-group input {
     padding: .5rem .3rem!important;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid #05ABC4;
     outline: 0;
 }
@@ -117,7 +99,7 @@ h3, p{
 #pag_acessar_estudante a{
     padding: .5rem .3rem!important;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 0;
     color: #ffff;
     background-color: #05ABC4;
@@ -127,20 +109,13 @@ h3, p{
     color: #05ABC4;
 }
 
-.elipseRedlogin img{
-    width: 50%;
-}
-.elipseRedlogin{
-    margin-top: 2rem!important;
-}
-
 /* Modal de atualizar senha */
 .modal{
    margin:10% 20% 0 28%!important;
 }
 #minha_caixa input {
     width:90%;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid #05ABC4;
     outline: 0;
     align-items: center;
@@ -148,7 +123,7 @@ h3, p{
 }
 
 
-/* Tela de acesso professor */
+/*################################## Página Acesso Professor ###################################### */
 #img-logomini img{
     width: 170px;
 }
