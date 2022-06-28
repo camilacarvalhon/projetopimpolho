@@ -4,7 +4,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const pg = require('pg');
-const auth= require('./auth.js')
+
+
+// Criptografia
+const bcrypt = require('bcrypt');
+let hashpassword 
+
 
 const app = express();
 app.use(cors());
@@ -32,15 +37,12 @@ client.connect();
 /*------------------------------------------------------------------------------------------------------- */
 //Função Cadastrar Estudante 
 
-function enviarEstudante() {
+  function enviarEstudante () {
     let nome = $('#nome').val()
     let email = $('#email').val()
-    let senha = auth($('#senha').val())
+    let senha = $('#senha').val()
     let anoturma = $('#anoturma').val()
 
-    
-
-   
     $.ajax(
         {
             type: 'POST',
@@ -59,11 +61,13 @@ function enviarEstudante() {
     );
 }
 // Inserindo dados
-app.post('/aluno', function (req, res) {
+app.post('/aluno', async (req, res) =>{
+   
+    hashpassword= await bcrypt.hashSync(req.body.senha, 10)
     client.query(
         {
             text: "INSERT INTO tbAluno(nome, email, senha, idTurma ) VALUES($1, $2, $3, $4)",
-            values: [req.body.nome, req.body.email, req.body.senha, req.body.idTurma]
+            values: [req.body.nome, req.body.email, hashpassword, req.body.idTurma]
         }
     ).then(
         function (ret) {
@@ -135,8 +139,7 @@ function acessar() {
             url: `http://localhost:3000/aluno/${email}/${senha}`,
             success: function (resposta) {
 
-                alert(`Usuário ${resposta.nome} está cadastrado!`);
-                
+              
                 window.location.href = "pag_acessar_estudante.html"
 
             },
@@ -150,7 +153,10 @@ function acessar() {
 //Consultando dados
 app.get(
     '/aluno/:email/:senha',
-    function (req, res) {
+    async (req, res) => {
+        let comparepassword= await bcrypt.compareSync(req.params.senha, parametrodobanco )
+        console.log(req.params.senha);
+        
         client.query(
             {
                 text: ' SELECT email,senha, nome FROM tbaluno WHERE email= $1 and senha= $2',

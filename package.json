@@ -1,7 +1,27 @@
 {
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "pg": "^8.7.3"
-  }
+  },
+  "name": "projetopimpolho",
+  "description": "1. [Sobre o Projeto](#sobre-o-projeto)\r     * [Dependências](#Dependências)\r     * [Autores](#Autores)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilacarvalhon/projetopimpolho.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camilacarvalhon/projetopimpolho/issues"
+  },
+  "homepage": "https://github.com/camilacarvalhon/projetopimpolho#readme"
 }

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Sniglet&display=swap');
+
+.section_jogo{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    /* background-color: #dddd; */
+    left: 10rem;
+}
+
+.jogoForca .cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogoForca .cabecalho h1{
+    color:#4D5E77;   
+    font-family:'Poppins';
+}
+
+
+.jogoForca .cabecalho button{
+    background-color: #05ABC4;
+    border-radius: 7px;
+    border: 0;
+    color: #ffff;
+    font-family:'Poppins';
+    padding: .4em!important ;
+    height: 2rem;
+}
+
+.display{
+    display: block;
+}
+
+.letra, .letraDigitada{
+    width: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px!important;
+    display: none;
+    outline: none;
+    border: none;
+    border: solid 2px #4D5E77 ;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.controleJogo{
+    
+    justify-content: center;
+    align-items: center;
+}
+.letraDigitada{
+    display: inline;
+    border: solid 2px #4D5E77;
+    width: 10rem;
+}
+.jogoForca .display .buttonExtras{
+    display: flex;
+}
+
+.jogoForca .display .buttonExtras button{
+    border-radius: 7px;
+    border: 0;
+    color: #ffff;
+    font-family:'Poppins';
+    padding: .4em!important ;
+    height: 2rem;
+}
+
+.jogoForca .display .buttonExtras .buttonConferir button{
+    background-color: greenyellow;
+}
+
+.jogoForca .display .buttonExtras .buttonDica button{
+    background-color: red;
+}
+
+.desenhaImagem{
+    position: absolute;
+    right: 150px;
+}
+/* 
+.desenhaImagem .tetoLadoE{
+    position: absolute;
+
+} */
