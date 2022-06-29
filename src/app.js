@@ -10,6 +10,9 @@ const pg = require('pg');
 const bcrypt = require('bcrypt');
 let hashpassword 
 
+// Pontuação dos jogos
+// import {pontosJogoForca} from '/src/jogodaforca/jogoForca';
+
 
 const app = express();
 app.use(cors());
@@ -407,6 +410,9 @@ app.get(
 
     }
 );
+
+/*------------------------------------------------------------------------------------------------------- */
+// Fazer o post dos pontos dos jogos
 
 function atualizar() {
     windows.onload()

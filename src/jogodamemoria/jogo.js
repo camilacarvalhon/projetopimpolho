@@ -28,7 +28,7 @@ let palavras = [
     'JANELA'
 ]
 
-let back = '/src/assets/logoMini.svg';
+let back = '/src/pages/assets/logoMini.svg';
 
 //Organizando os pares dos indices 
 let armaIndice = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
@@ -38,6 +38,8 @@ let cartaVirada = false;
 let posCartaVirada = -1;
 let valorCartaVirada = 0;
 let contarPontos = 0;
+let pontos = 0
+let pontuacao 
 
 //Carregando a página
 onload = () => {
@@ -129,6 +131,8 @@ function clicandoNaImagem(i) {
                     alert('Erro!');
             }
             contarPontos++;
+            pontuacao = somarPontos();
+            console.log(pontuacao);
         }
         else {
             const pos = posCartaVirada;
@@ -156,3 +160,7 @@ function clicandoNaImagem(i) {
         });
     }
 };
+
+function somarPontos(){
+    return pontos+= 10;
+}

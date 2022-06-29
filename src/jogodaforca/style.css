@@ -3,7 +3,7 @@
 .section_jogo{
     position: relative;
     width: 1200px;
-    height: 500px;
+    height: 550px;
     /* background-color: #dddd; */
     left: 10rem;
 }
@@ -33,7 +33,16 @@
 .display{
     display: block;
 }
-
+.jogoForca .forca, .palavraSorteada, .controleJogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jogoForca .forca img{
+    width: 300px;
+    height: 300px;
+    margin: 1rem !important;
+}
 .letra, .letraDigitada{
     width: 3rem;
     font-size: 2rem;
@@ -44,21 +53,26 @@
     outline: none;
     border: none;
     border: solid 2px #4D5E77 ;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
     background-color: #ffffff;
 }
 
-.controleJogo{
-    
-    justify-content: center;
-    align-items: center;
-}
 .letraDigitada{
     display: inline;
     border: solid 2px #4D5E77;
-    width: 10rem;
+    width: 12rem;
 }
+.controleJogo {
+    margin-top: 1rem!important;
+}
+
+.controle p{
+    font-family:'Poppins';
+    font-weight: bold;
+}
+
+
 .jogoForca .display .buttonExtras{
     display: flex;
 }
@@ -67,25 +81,17 @@
     border-radius: 7px;
     border: 0;
     color: #ffff;
-    font-family:'Poppins';
+    font-family:'Poppins' ;
     padding: .4em!important ;
-    height: 2rem;
+    height: 2.6rem;
+    
 }
 
 .jogoForca .display .buttonExtras .buttonConferir button{
-    background-color: greenyellow;
+    background-color: #008037;
 }
 
 .jogoForca .display .buttonExtras .buttonDica button{
-    background-color: red;
+    background-color: #e0464c;
 }
 
-.desenhaImagem{
-    position: absolute;
-    right: 150px;
-}
-/* 
-.desenhaImagem .tetoLadoE{
-    position: absolute;
-
-} */
