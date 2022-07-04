@@ -2,9 +2,10 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 const pg = require('pg');
-
+require('dotenv').config()
 
 // Criptografia
 const bcrypt = require('bcrypt');
@@ -17,19 +18,23 @@ let hashpassword
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());//receber parâmetros no formato json
+// app.set('view engine', 'ejs');
+// Static
+// app.static('/static', express.use('public'))
 
+const staticPath = path.join(__dirname, "../public")
 
-
+app.use(express.static(staticPath))
 
 
 //classe client definida dentro do pg
 const client = new pg.Client(
     {
-        user: 'postgres',
-        host: 'localhost',
-        database: 'projetoPPI',
-        password: '92861922',
-        port: 5432
+        user: process.env.DATABASE_USERNAME,
+        host: process.env.HOST,
+        database: process.env.DATABASE,
+        password: process.env.PASSWORD,
+        port: process.env.DATABASE_PORT
     }
 );
 
@@ -37,40 +42,21 @@ const client = new pg.Client(
 //conectar ao bd 
 client.connect();
 
-/*------------------------------------------------------------------------------------------------------- */
-//Função Cadastrar Estudante 
 
-  function enviarEstudante () {
-    let nome = $('#nome').val()
-    let email = $('#email').val()
-    let senha = $('#senha').val()
-    let anoturma = $('#anoturma').val()
+// Acessando a rota pagina principal
 
-    $.ajax(
-        {
-            type: 'POST',
-            url: `http://localhost:3000/aluno`,
-            data: JSON.stringify({
-                "nome": nome,
-                "email": email,
-                "senha": senha,
-                "idTurma": anoturma
-            }),
-            contentType: 'application/json',
-            success: function (resposta) {
-                window.location.href = "pag_login_estudante.html"
-            }
-        }
-    );
-}
+app.get('/', (req,res)=>{
+    res.send('hello');
+})
+
 // Inserindo dados
 app.post('/aluno', async (req, res) =>{
    
-    hashpassword= await bcrypt.hashSync(req.body.senha, 10)
+    // hashpassword= await bcrypt.hashSync(req.body.senha, 10)
     client.query(
         {
             text: "INSERT INTO tbAluno(nome, email, senha, idTurma ) VALUES($1, $2, $3, $4)",
-            values: [req.body.nome, req.body.email, hashpassword, req.body.idTurma]
+            values: [req.body.nome, req.body.email,req.body.senha , req.body.idTurma] //hashpassword
         }
     ).then(
         function (ret) {
@@ -84,31 +70,7 @@ app.post('/aluno', async (req, res) =>{
     );
 
 });
-/*------------------------------------------------------------------------------------------------------- */
-//Função Cadastrar Professor
 
-function enviarProfessor() {
-    let nome = $('#nome').val()
-    let email = $('#email').val()
-    let senha = $('#senha').val()
-    let anoturma = $('#anoturma').val()
-    $.ajax(
-        {
-            type: 'POST',
-            url: `http://localhost:3000/professor`,
-            data: JSON.stringify({
-                "nomeprof": nome,
-                "email": email,
-                "senha": senha,
-                "idTurma": anoturma
-            }),
-            contentType: 'application/json',
-            success: function (resposta) {
-                alert(`Usuário cadastrado!`);
-            }
-        }
-    );
-}
 // Inserindo dados
 app.post('/professor', function (req, res) {
     client.query(
@@ -130,39 +92,14 @@ app.post('/professor', function (req, res) {
 });
 
 /*------------------------------------------------------------------------------------------------------- */
-
-//Função Acessar - realizar consulta Estudante
-function acessar() {
-    let email = $('#email').val()
-    let senha = $('#senha').val()
-
-    $.ajax(
-        {
-            type: 'GET',
-            url: `http://localhost:3000/aluno/${email}/${senha}`,
-            success: function (resposta) {
-
-              
-                window.location.href = "pag_acessar_estudante.html"
-
-            },
-            error: function (resposta) {
-                alert(`Usuário não está cadastrado!`);
-            }
-        }
-    );
-}
-
 //Consultando dados
 app.get(
     '/aluno/:email/:senha',
-    async (req, res) => {
-        let comparepassword= await bcrypt.compareSync(req.params.senha, parametrodobanco )
-        console.log(req.params.senha);
+    async (req, res) => { 
         
         client.query(
             {
-                text: ' SELECT email,senha, nome FROM tbaluno WHERE email= $1 and senha= $2',
+                text: ' select al.senha, al.email, al.nome, al.idAluno, jo.nomejogo, aj.pontos	from tbAluno al inner join tbAlunoJogo aj on al.idAluno = aj.idAluno inner join tbJogo jo on aj.idJogo = jo.idJogo WHERE al.email= $1 and al.senha= $2 ',
                 values: [req.params.email, req.params.senha]
             }
 
@@ -174,37 +111,21 @@ app.get(
                         status: 'OK',
                         email: tbAluno.email,
                         senha: tbAluno.senha,
-                        nome: tbAluno.nome
+                        nome: tbAluno.nome,
+                        nomejogo: tbAluno.nomejogo,
+                        pontosjogo: tbAluno.pontos
                     }
                 );
+                console.log(ret);
+                
             }
+            
         );
 
     }
 );
 
-/*------------------------------------------------------------------------------------------------------- */
 
-//Função Acessar - realizar consulta Professor
-function acessarProfessor() {
-    let email = $('#emailprof').val()
-    let senha = $('#senhaprof').val()
-
-    $.ajax(
-        {
-            type: 'GET',
-            url: `http://localhost:3000/professor/${email}/${senha}`,
-            success: function (resposta) {
-
-                alert(`Usuário ${resposta.nomeprof} está cadastrado!`);
-                window.location.href = "pag_acessar_professor.html"
-            },
-            error: function (resposta) {
-                alert(`Usuário não está cadastrado!`);
-            }
-        }
-    );
-}
 
 //Consultando dados
 app.get(
@@ -234,45 +155,7 @@ app.get(
 );
 
 
-/*------------------------------------------------------------------------------------------------------- */
-//Atualizando dados Estudante
 
-
-//Função recuperar modal
-function recuperar() {
-    let minha = $('#minha_caixa');
-    let modal = new bootstrap.Modal(minha);
-    modal.show();
-}
-
-
-//Funçãp Atualizar 
-
-
-function atualizar_senha() {
-    let senha = $('#senha_recup').val();
-    let email = $('#email_recup').val();
-    let codigo = $('#codigo_recup').val();
-
-
-    $.ajax(
-        {
-            type: 'POST',
-            url: `http://localhost:3000/aluno/atualizar`,
-            data: JSON.stringify({
-
-                "senha": senha,
-                "email": email,
-                "idaluno": codigo
-            }),
-            contentType: 'application/json',
-            success: function (resposta) {
-                alert(`Dados atualizados com sucesso!`);
-                window.location.href = "pag_login_estudante.html"
-            }
-        }
-    );
-}
 
 app.post('/aluno/atualizar', function (req, res) {
     client.query(
@@ -294,45 +177,7 @@ app.post('/aluno/atualizar', function (req, res) {
 });
 
 
-/*------------------------------------------------------------------------------------------------------- */
-//Atualizando dados Professor
 
-
-//Função recuperar modal
-function recuperarProfessor() {
-    let minha = $('#minha_caixa');
-    let modal = new bootstrap.Modal(minha);
-    modal.show();
-}
-
-
-//Funçãp Atualizar 
-
-
-function atualizar_senha_professor() {
-    let senha = $('#senha_recup').val();
-    let email = $('#email_recup').val();
-    let codigo = $('#codigo_recup').val();
-
-
-    $.ajax(
-        {
-            type: 'POST',
-            url: `http://localhost:3000/professor/atualizar`,
-            data: JSON.stringify({
-
-                "senha": senha,
-                "email": email,
-                "idprofessor": codigo
-            }),
-            contentType: 'application/json',
-            success: function (resposta) {
-                alert(`Dados atualizados com sucesso!`);
-                window.location.href = "pag_login_professor.html"
-            }
-        }
-    );
-}
 
 app.post('/professor/atualizar', function (req, res) {
     client.query(
@@ -353,30 +198,7 @@ app.post('/professor/atualizar', function (req, res) {
 
 });
 
-/*------------------------------------------------------------------------------------------------------- */
-//Função selecionar jogo
-function consultarJogo() {
-    let jogo = $('#nomeJogo').val();
 
-    $.ajax(
-        {
-            type: 'GET',
-            url: `http://localhost:3000/aluno/${jogo}`,
-            success: function (resposta) {
-
-                for (let i = 0; i < resposta.resultados.length; i++) {
-                    $('#tbnome').append(`${resposta.resultados[i].nomealuno}<br>`);
-                    $('#tbid').append(`${resposta.resultados[i].idaluno}<br>`);
-                    $('#tbnomejogo').append(` ${resposta.resultados[i].nomejogo}<br>`);
-                    $('#tbpontos').append(` ${resposta.resultados[i].pontos}<br>`);
-                }
-            },
-            error: function (resposta) {
-                alert(`Não tem esse jogo!`);
-            }
-        }
-    );
-}
 //Consultando por jogo
 app.get(
     '/aluno/:jogo',
@@ -411,18 +233,13 @@ app.get(
     }
 );
 
-/*------------------------------------------------------------------------------------------------------- */
-// Fazer o post dos pontos dos jogos
 
-function atualizar() {
-    windows.onload()
-}
 
 /*------------------------------------------------------------------------------------------------------- */
 
 //Conectar o sevidor web
 app.listen(
-    3000,
+    process.env.PORT,
     function () {
         console.log('Servidor web funcionando');
     }

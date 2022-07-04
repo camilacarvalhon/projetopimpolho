@@ -1,0 +1,192 @@
+/*################################## Página Acesso ###################################### */
+body {
+    background-image: url('../assets/capa_acesso.svg');
+    background-repeat: no-repeat;
+}
+
+.headerAcesso {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testeBotao img {
+    height: 60px;
+    width: 59px;
+    background-color: #DDDDDD;
+    border-radius: 3px;
+}
+.testeBotao img:hover{
+    background-color: #CCCCCC;
+    transition: 0.3s;
+}
+.offcanvas {
+    width: 200px!important;
+    height: 200px;
+    border-radius:10px;
+    background-color: #DDDDDD!important;
+}
+.offcanvas .offcanvas-header h5{
+    font-size: 1.2rem;
+    font-family:'Poppins';
+    color: #013563;
+}
+.offcanvas .offcanvas-header button{
+    border: none;
+    background: none;
+
+}
+
+
+/* Inicio Main página acesso estudante */
+.containerJogos {
+    position: relative;
+    width: 900px !important;
+    margin: 0 auto !important;
+    height: 68vh!important;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardJogo {
+    width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cardJogo .cardConteudo {
+    width: 100px;
+    height: 96px;
+    background-color: #FFFFFF;
+    border-radius: 40rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardJogo .cardConteudo .cardConteudoJogo {
+    height: 83px;
+    width: 82px;
+    border-radius: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardJogo:first-child .cardConteudo .cardConteudoJogo {
+    background-color: #038E00;
+}
+.cardJogo:nth-child(2) .cardConteudo .cardConteudoJogo{
+    background-color: #A80202;
+}
+.cardJogo:nth-child(2){
+    position: relative;
+    top: 8rem;
+}
+.cardJogo .card-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.cardJogo .card-titulo p{
+    font: 1.2rem 'Sniglet', cursive ;
+    color:#000;
+    text-transform: uppercase;
+}
+/* Fim Main página acesso estudante */
+
+.footerPaginaAcessar{
+    display: flex;
+    flex-direction: row;
+}
+.buttonsFooter{
+    display: flex;
+}
+
+.buttonsFooter .buttonDica, .buttonSom, .buttonHome{
+    background-color: #DDDDDD;
+    height: 60px;
+    width: 80px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+
+}
+.buttonsFooter .buttonDica:hover, .buttonSom:hover, .buttonHome:hover{
+    background-color: #CCCCCC;
+    transition: 0.3s;
+}
+
+.buttonsFooter img{
+    height: 50px;
+    width: 70px;
+}
+
+.logout{
+    position: absolute!important;
+    right: 0;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+
+    .headerAcesso{
+        justify-content: space-between;
+    }
+    .img-logomini img{
+        width: 60%;
+        margin-right: 0;
+    }
+    .testeBotao img {
+        height: 50px;
+        width: 40px;
+    }
+
+    .containerJogos {
+        width: auto !important;
+        margin: auto!important;
+        height: 80vh!important;
+    }
+    .card-container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .cardJogo:nth-child(2){
+        position: absolute!important;
+        right: 0;
+        top: 300px;
+    }
+
+    /* .buttonsFooter{
+        margin: auto!important;
+    }
+     */
+    .buttonsFooter .buttonDica, .buttonSom, .buttonHome{
+        background-color: #DDDDDD;
+        height: 60px;
+        width: 40px;
+    
+    }
+    .buttonsFooter img{
+        height: 30px;
+        width: 60px;
+    }
+    .logout{
+        position: absolute!important;
+        right: 0;
+    }
+}

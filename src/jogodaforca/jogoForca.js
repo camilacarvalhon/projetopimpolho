@@ -12,6 +12,7 @@ var acertos = false;
 var pontos = 0;
 var tam
 var pontuacao
+var ja_digitada = []
 
 async function iniciar() {
     await limparTela();
@@ -22,6 +23,7 @@ async function iniciar() {
     erros = 0
     acertos = false;
     right = 0
+    ja_digitada = []
     $('#imgForco').attr('src','assets/forcaCompleta.png')
 }
 
@@ -54,40 +56,54 @@ function jogar() {
     letraMaiuscula = letra_digitada.toUpperCase()
     letra_digitada = document.getElementById('letraDigitada').value = ""
 
+    for(let l of ja_digitada){
+        if(l == letraMaiuscula){
+            alert('Essa letra ja foi digitada')
+        }else{
+            
+        }
+    }
+
 
     if (letraMaiuscula == "") {
         alert("Por favor, digite uma letra!")
+    }else{  
+        marca_chute_correto(letraMaiuscula, palavra)
+
+        if (!acertos) {
+            erros++
+            desenhaForca(erros);
+        } else if (acertos) {
+            console.log(right);
+            acertos = false;
+        }
+
+        if(erros == 7) {
+            // mostrar desenho final da forca
+            alert("Não foi dessa vez! A palavra sorteada era " + palavra)
+            // desabilitar o input para digitar e habilitar ao sortear uma palavra ou reiniciar;
+        }else if(right == palavra.length){
+            alert("PARABÉNS!")
+            console.log(pontuacao);
+            setTimeout(() => {iniciar()}, 3000)
+        }
+
     }
 
-    marca_chute_correto(letraMaiuscula, palavra)
+    
 
-    if (!acertos) {
-        erros++
-        desenhaForca(erros);
-    } else if (acertos) {
-        console.log(right);
-        acertos = false;
-    }
-    if(erros == 7) {
-        // mostrar desenho final da forca
-        alert("Não foi dessa vez! A palavra sorteada era " + palavra)
-        // desabilitar o input para digitar e habilitar ao sortear uma palavra ou reiniciar;
-    }else if(right == palavra.length){
-        alert("PARABÉNS!")
-        console.log(pontuacao);
-        setTimeout(() => {iniciar()}, 4000)
-    }
 }
 
 function marca_chute_correto(letra_digitada, palavra_secreta) {
+    
     for (pos in palavra_secreta) {
         if (letra_digitada == palavra_secreta[pos]) {
+            ja_digitada.push(letra_digitada)
             let acessaLetra = document.getElementById('letra' + pos)
             acessaLetra.value = letra_digitada;
             acertos = true;
             right++
             pontuacao = somaPontos()
-            
         }
     }
 
@@ -137,8 +153,6 @@ let dica = () => {
 
 }
 
-
-// export let pontosJogoForca = somaPontos;
 
 window.addEventListener('load', iniciar);
 

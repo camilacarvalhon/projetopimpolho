@@ -2,6 +2,8 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "pg": "^8.7.3"
   },
@@ -9,9 +11,10 @@
   "description": "1. [Sobre o Projeto](#sobre-o-projeto)\r     * [Dependências](#Dependências)\r     * [Autores](#Autores)",
   "version": "1.0.0",
   "main": "index.js",
-  "type":"module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",

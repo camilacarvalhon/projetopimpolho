@@ -31,7 +31,7 @@
 }
 
 .display{
-    display: block;
+    /* display: block; */
 }
 .jogoForca .forca, .palavraSorteada, .controleJogo{
     display: flex;
@@ -95,3 +95,81 @@
     background-color: #e0464c;
 }
 
+@media (max-width: 575.98px) { 
+    .section_jogo{
+        position: relative;
+        width: 300px;
+        height: 460px;
+        /* background-color: #dddd; */
+        left: 1rem;
+    }
+    .jogoForca .cabecalho h1{
+        font-size:1.4rem;
+        text-align: center;
+    }
+
+    .jogoForca .cabecalho button{
+        background-color: #05ABC4;
+        border-radius: 7px;
+        border: 0;
+        color: #ffff;
+        font-family:'Poppins';
+        padding: .3em!important ;
+        height: 4rem;
+        font-size: 1rem;
+    }
+    .jogoForca .forca img{
+        width: 150px;
+        height: 150px;
+        margin: 1rem !important;
+    }
+    .jogoForca  .controleJogo{
+        display: block;
+        
+    }
+    .letra, .letraDigitada{
+        width: 2rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 3px!important;
+        display: none;
+        outline: none;
+        border: none;
+        border: solid 2px #4D5E77 ;
+        margin-bottom: .5rem;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+    .controle p{
+        font-family:'Poppins';
+        font-size: 1rem;
+    }
+    .controleJogo .display{
+        display: block!important;
+    }
+    
+    
+    .letraDigitada{
+        display: inline;
+        border: solid 2px #4D5E77;
+        width: 12rem;
+    }
+    .jogoForca .display .controleJogo{
+        display:block;
+        
+    }
+    .jogoForca .display .buttonExtras{
+        justify-content: center;
+    }
+    .jogoForca .display .buttonExtras button{
+        border-radius: 7px;
+        border: 0;
+        color: #ffff;
+        font-family:'Poppins' ;
+        padding: .3em!important ;
+        height: 2rem;
+        font-size: 1rem;
+        
+    }
+}

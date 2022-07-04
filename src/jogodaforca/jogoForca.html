@@ -18,7 +18,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script  src="jogoForca.js" defer></script>
-    <!-- <script src="../app.js" defer></script> -->
+    <!-- <script src="../../src/app.js" defer></script> -->
 </head>
 
 <body>
@@ -67,7 +67,7 @@
                     <h1 class=" h3 m-3">Jogo da Forca</h1>
                     <button type="button" class=" btn" onclick="iniciar()">Sortear palavra</button>
                 </div>
-                <div class="forca">
+                <div class="forca text-center">
                     <img src="assets/forcaCompleta.png" alt="" id="imgForco">
                 </div>
                 <div class="palavraSorteada display" id="palavraSorteada">
@@ -75,13 +75,13 @@
                     <div class="teste"></div>
                 </div>
                 <div class="controleJogo display " id="jogador">
-                    <div class="controle mb-2">
-                        <p class="h4" >Digite uma letra:</p>
+                    <div class="controle mb-2 text-center">
+                        <p class="h4 " >Digite uma letra:</p>
                         <input type="text" id="letraDigitada" class="letraDigitada" maxlength="1" >
                     </div>
                     
-                    <div class="buttonExtras mt-3">
-                        <div class="buttonConferir me-2">
+                    <div class="buttonExtras mt-3 " >
+                        <div class="buttonConferir me-2 ">
                             <button type="button" onclick="jogar()">Jogar</button>
                         </div>
                         <div class="buttonDica">
