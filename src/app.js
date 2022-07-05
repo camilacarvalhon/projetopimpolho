@@ -239,7 +239,7 @@ app.get(
 
 //Conectar o sevidor web
 app.listen(
-    process.env.PORT,
+    process.env.PORT || 3000,
     function () {
         console.log('Servidor web funcionando');
     }
