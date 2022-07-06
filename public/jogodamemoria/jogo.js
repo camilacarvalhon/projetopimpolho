@@ -28,7 +28,7 @@ let palavras = [
     'JANELA'
 ]
 
-let back = '/src/pages/assets/logoMini.svg';
+let back = '../assets/logoMini.svg';
 
 //Organizando os pares dos indices 
 let armaIndice = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
