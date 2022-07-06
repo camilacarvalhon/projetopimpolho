@@ -118,11 +118,11 @@ app.get(
                         email: tbAluno.email,
                         senha: tbAluno.senha,
                         nome: tbAluno.nome,
-                        nomejogo: tbAluno.nomejogo,
+                        nomejogo: ret.rows,
                         pontosjogo: tbAluno.pontos
                     }
                 );
-                console.log(ret);
+               
                 
             }
             

@@ -88,7 +88,7 @@ function acessar() {
                 success: function (resposta) {
                     localStorage.removeItem('nome_estudante');
                     localStorage.setItem('nome_estudante', resposta.nome);
-                    localStorage.setItem('nome_jogo', resposta.nomejogo);
+                    localStorage.setItem('nome_jogo', JSON.stringify(resposta.nomejogo));
                     localStorage.setItem('pontos_jogo', resposta.pontosjogo)
                     window.location.href = "pag_acessar_estudante.html"
                    

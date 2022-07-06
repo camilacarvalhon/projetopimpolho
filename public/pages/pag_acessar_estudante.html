@@ -55,9 +55,9 @@
                     <div class="offcanvas-body">
                         <ul class="text-center">
                             <li>Ano/Turma: 3º Ano</li><hr width="90%" >
-                            <li> Jogo da memória</li><span id></span><hr width="90%" >
-                            <li> Jogo da memória</li><hr width="90%" >
-                            <li> Jogo da memória</li><hr width="90%" >
+                            <li id="jogMemoria"> </li><span id></span><hr width="90%" >
+                            <li id="jogForca"></li><hr width="90%" >
+                            <li> </li><hr width="90%" >
                         </ul>
                     </div>
                 </div>
@@ -116,6 +116,18 @@
 
     <script>
          $('#nameAluno').text(localStorage.getItem('nome_estudante'))
+         let jogos = JSON.parse(localStorage.getItem('nome_jogo'))
+
+         for(let jogo of jogos){
+            console.log(jogo.nomejogo);
+            
+            if(jogo.nomejogo.includes('memória')){
+                $('#jogMemoria').text(jogo.nomejogo+ ' - ' + jogo.pontos)
+            }
+            if(jogo.nomejogo.includes('complete')){
+                $('#jogForca').text(jogo.nomejogo+ ' - ' + jogo.pontos)
+            }
+         }
     </script>
 </body>
 </html>
