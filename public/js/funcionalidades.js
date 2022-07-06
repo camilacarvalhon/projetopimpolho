@@ -20,7 +20,7 @@ function recuperarProfessor() {
 
 //Função Cadastrar Estudante 
 
-function enviarEstudante () {
+function enviarEstudante() {
     let nome = $('#nome').val()
     let email = $('#email').val()
     let senha = $('#senha').val()
