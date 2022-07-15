@@ -38,20 +38,23 @@
 
         <main class="row mt-4">
             <div class="col-lg-12 col-xs-8 col-sm-8 col-md-10 formAcesso">
-                <form class="form" >
+
+                <form action="./pag_acessar_professor.html" class="form" >
                     <h3 class="text-center">Espaço do Professor</h3>
                     <div class="form-group">
-                        <label for="emailprof" >Digite seu email:*</label><br>
+                        <span id="msgAlertaErroCad"></span>
+                        <label for="emailprof">Digite seu email:*</label><br>
                         <input type="email" name="text" id="emailprof"  >
                     </div>
                     <div class="form-group">
                         <label for="senhaprof">Digite sua senha:*</label><br>
-                        <input type="password" name="text" id="senhaprof" >
-                    </div>
-                    <div id="pag_acessar_estudante" class="mt-3">
-                        <a class="btn" onclick="acessarProfessor()">Acessar</a>
+                        <input type="password" name="senha" id="senhaprof" >
                     </div>
 
+                    <div class="buttonAcesso mt-3">
+                        <input class="btn" value="Acessar" type ="button" onclick="acessarProfessor()"></input>
+                    </div>
+                    
                     <div id="cadastrar" class="  text-center">
                         <a href="pag_cadastro_professor.html">Cadastrar</a>
                     </div>

@@ -57,7 +57,7 @@
         margin-top: 8rem!important;
     }
     
-    #pag_acessar_estudante a{
+    .buttonAcesso input{
         padding: .2rem .1rem!important;
         width: 200px;
         border-radius: 8px;

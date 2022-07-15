@@ -96,7 +96,7 @@ h3, p{
 
 }
 
-#pag_acessar_estudante a{
+.buttonAcesso input{
     padding: .5rem .3rem!important;
     width: 300px;
     border-radius: 8px;
@@ -107,6 +107,10 @@ h3, p{
 
 #cadastrar a, #voltar a, #recuperar a{
     color: #05ABC4;
+}
+
+#msgAlertaErroCad{
+    color: rgb(184, 81, 81);
 }
 
 /* Modal de atualizar senha */
@@ -159,6 +163,10 @@ align-items: center;
 
 .sectionThree {
     margin-top: 150px!important;
+}
+
+#buttonProf{
+    margin-top: 28rem!important;
 }
 
 
