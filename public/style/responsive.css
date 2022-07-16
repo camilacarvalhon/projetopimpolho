@@ -1,6 +1,10 @@
 
 @media (max-width: 575.98px) { 
 
+    .tipoUsuario h3{
+        font-size: 1rem;
+    }
+
     .mainAcesso{
         margin-top: 9rem!important;
         display: inline;
@@ -13,9 +17,9 @@
         font-family:'Poppins';
     }
 
-    h3{
+    /* h3{
         font-size: 1.7rem!important;
-    }
+    } */
      #estudante a, #professor a{
         width: 200px;
         border-radius: 8px;
@@ -67,10 +71,6 @@
     }
 
         /* Modal de atualizar senha */
-    .modal{
-        width: 250px!important;
-
-    }
     #minha_caixa input {
         width:95%;
         border-radius: 8px;
@@ -127,7 +127,6 @@
         font-size: 12pt!important;
     }
 
- 
-    
+  
 
 }

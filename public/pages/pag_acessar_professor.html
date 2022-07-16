@@ -55,41 +55,33 @@
                         <ul class="text-center">
                             <li>Ano/Turma: 3º Ano</li>
                             <hr width="90%">
-                            <li> Jogo da memória</li>
-                            <hr width="90%">
-                            <li> Jogo da memória</li>
-                            <hr width="90%">
-                            <li> Jogo da memória</li>
-                            <hr width="90%">
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="containerListaAlunos">
+        <main class="containerListaAlunos ">
             <div id="relatorio">
-                <h3 class="text-center">Relatório de pontos por jogo</h3>
+                <h3 class="">Relatório de pontos por jogo</h3>
                 <label for="nomeJogo">Nome do jogo:*</label><br>
                 <input type="text" name="text" id="nomeJogo">
                 <button onclick="consultarJogo()" class="m-2">Filtrar</button>
                 <a href="" onclick="atualizar()"><img src="../assets/atualizar.svg" alt="recarregar"></a>
             </div>
-            <table class="table">
+            <table class="table tableRelatorio">
                 <thead>
                     <tr>
                         <th scope="col">Nome do Aluno</th>
-                        <th scope="col">Código do Aluno</th>
-                        <th scope="col">Nome do Jogo</th>
-                        <th scope="col">Pontos</th>
+                        <th scope="col" class="me-2">Nome do Jogo</th>
+                        <th scope="col"  class="text-center">Pontos</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td id="tbnome"></td>
-                        <td id="tbid"></td>
-                        <td id="tbnomejogo"></td>
-                        <td id="tbpontos"></td>
+                        <td id="tbnomejogo" class="me-2"></td>
+                        <td id="tbpontos" class="text-center"></td>
                     </tr>
                 </tbody>
             </table>

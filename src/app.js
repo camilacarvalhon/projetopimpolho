@@ -28,22 +28,22 @@ app.use(express.static(staticPath))
 
 
 //classe client definida dentro do pg
-// const client = new pg.Client(
-//     {
-//         user: process.env.DATABASE_USERNAME,
-//         host: process.env.HOST,
-//         database: process.env.DATABASE,
-//         password: process.env.PASSWORD,
-//         port: process.env.DATABASE_PORT
-//     }
-// );
-
-const client = new pg.Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false
+const client = new pg.Client(
+    {
+        user: process.env.DATABASE_USERNAME,
+        host: process.env.HOST,
+        database: process.env.DATABASE,
+        password: process.env.PASSWORD,
+        port: process.env.DATABASE_PORT
     }
-  });
+);
+
+// const client = new pg.Client({
+//     connectionString: process.env.DATABASE_URL,
+//     ssl: {
+//       rejectUnauthorized: false
+//     }
+//   });
 
 //conectar ao bd 
 client.connect();

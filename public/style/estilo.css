@@ -114,9 +114,25 @@ h3, p{
 }
 
 /* Modal de atualizar senha */
-.modal{
-   margin:10% 20% 0 28%!important;
-}
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+  }
+  
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
 #minha_caixa input {
     width:90%;
     border-radius: 8px;
@@ -128,6 +144,19 @@ h3, p{
 
 
 /*################################## Página Acesso Professor ###################################### */
+.containerListaAlunos{
+    margin: 2rem !important;
+    height: 480px!important;
+    display: inline-flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+   
+
+}
+.tableRelatorio{
+    background-color: #ffff;
+}
 #img-logomini img{
     width: 170px;
 }
@@ -137,10 +166,10 @@ h3, p{
 }
 
 #relatorio input{
-padding: .2rem ;
+padding: .4rem!important ;
 margin-top: 0.6rem;
 width: 300px;
-border-radius: 10px;
+border-radius: 7px;
 border: 2px solid #05ABC4;
 outline: 0;
 align-items: center;
@@ -152,7 +181,7 @@ align-items: center;
     border: 0;
     color: #ffff;
     width: 80px;
-    padding: .2rem ;
+    padding: .4rem!important ;
 }
 
 /* Logout */
@@ -164,10 +193,12 @@ align-items: center;
 .sectionThree {
     margin-top: 150px!important;
 }
-
+/* 
 #buttonProf{
-    margin-top: 28rem!important;
-}
+    margin-top: 28px;
+    
+  
+} */
 
 
 
