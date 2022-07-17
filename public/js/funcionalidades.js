@@ -165,6 +165,7 @@ function acessar() {
                 },
                 error: function (resposta) {
                     alert(`Usuário não está cadastrado!`);
+                    // adicionar mensagem de erro email ou senha invalida
                 }
             }
         );

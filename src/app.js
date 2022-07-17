@@ -51,9 +51,9 @@ client.connect();
 
 // Acessando a rota pagina principal
 
-app.get('/', (req,res)=>{
-    res.send('hello');
-})
+// app.get('/', (req,res)=>{
+//     res.send('hello');
+// })
 
 // Inserindo dados
 app.post('/aluno', async (req, res) =>{
@@ -105,7 +105,7 @@ app.get(
         
         client.query(
             {
-                text: ' select al.senha, al.email, al.nome, al.idAluno, jo.nomejogo, aj.pontos	from tbAluno al inner join tbAlunoJogo aj on al.idAluno = aj.idAluno inner join tbJogo jo on aj.idJogo = jo.idJogo WHERE al.email= $1 and al.senha= $2 ',
+                text: ' select al.senha, al.email, al.nome, al.idAluno, jo.nomejogo, aj.pontos	from tbAluno al left join tbAlunoJogo aj on al.idAluno = aj.idAluno left join tbJogo jo on aj.idJogo = jo.idJogo WHERE al.email= $1 and al.senha= $2 ',
                 values: [req.params.email, req.params.senha]
             }
 
@@ -126,7 +126,12 @@ app.get(
                 
             }
             
-        );
+        ).catch((error) => {
+            console.error(error);
+            res.status(404).json({
+               status:'Erro'
+            })
+        });
 
     }
 );
@@ -155,8 +160,12 @@ app.get(
                     }
                 );
             }
-        );
-
+        ).catch((error) => {
+            console.error(error);
+            res.status(404).json({
+               status:'Erro'
+            })
+        });
     }
 );
 
