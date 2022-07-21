@@ -154,7 +154,6 @@ function clicandoNaImagem(i) {
     }
 
     if (contarPontos == 8) {
-        alert('Parabéns!')
         $('#btReinicio').on('click', function () {
             onload();
         });

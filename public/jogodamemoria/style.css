@@ -33,6 +33,9 @@ p{
     overflow: hidden;
     transition: 0.5s;
     cursor: url('../assets/cursorBlue.png'), auto;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+    box-shadow: 0 0.3rem .8rem rgba(17, 17, 17, 0.3);
+   
 }
 .cardNContainer .jogoCard .card img{
     width: 105px;
@@ -42,15 +45,16 @@ p{
 
 #palavra h2{
     font-family: 'Sniglet', cursive;
-    font-size: 30px;
+    font-size: 33px;
 }
 
  .rodape p, #palavra p{
     color: #000;
     text-transform: uppercase;
     font-family: 'Sniglet', cursive;
-    font-size: 20px;
+    font-size: 27px;
     line-height: 1.6em;
+    background-color: #ffffff;
 }
 .rodape{
     display: block;

@@ -156,7 +156,7 @@ function acessar() {
                 type: 'GET',
                 url: `${window.location.origin}/aluno/${email}/${senha}`,
                 success: function (resposta) {
-                    // localStorage.removeItem('nome_estudante');
+                    localStorage.removeItem('nome_estudante');
                     localStorage.setItem('nome_estudante', resposta.nome);
                     localStorage.setItem('nome_jogo', JSON.stringify(resposta.nomejogo));
                     localStorage.setItem('pontos_jogo', resposta.pontosjogo);
