@@ -119,7 +119,6 @@
          let jogos = JSON.parse(localStorage.getItem('nome_jogo'))
 
          for(let jogo of jogos){
-            console.log(jogo.nomejogo);
             
             if(jogo.nomejogo.includes('memória')){
                 $('#jogMemoria').text(jogo.nomejogo+ ' - ' + jogo.pontos)

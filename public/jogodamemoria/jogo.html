@@ -48,9 +48,9 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="text-center">
-                            <li>Ano/Turma: 3º Ano</li><hr width="90%" >
-                            <li id="jogMemoria"> </li><hr width="90%" >
-                            <li id="jogForca"></li><hr width="90%" >
+                            <li>Ano/Turma: 3º Ano</li>
+                            <li id="jogMemoria"> </li>
+                            <li id="jogForca"></li>
                         </ul>
                     </div>
                 </div>
@@ -180,7 +180,6 @@
     let jogos = JSON.parse(localStorage.getItem('nome_jogo'))
 
     for(let jogo of jogos){
-       console.log(jogo.nomejogo);
        
        if(jogo.nomejogo.includes('memória')){
            $('#jogMemoria').text(jogo.nomejogo+ ' - ' + jogo.pontos)

@@ -42,7 +42,7 @@ function desenha_letras_palavras(palavra) {
 }
 
 function carrega_palavra_secreta() {
-    let palavras = ["chaveiro", "chave", "boneca", "chuveiro", "maca", "banana", "melancia", "dado", "vaca"];
+    let palavras = ["chaveiro", "chave", "boneca", "chuveiro", "maca", "banana", "melancia", "dado", "vaca","chinelo", "sapato"];
     tam = palavras.length
     let qtd = palavras.length - 1;
     let pos = Math.round(Math.random() * qtd);
@@ -55,12 +55,11 @@ function jogar() {
     letra_digitada = document.getElementById('letraDigitada').value;
     letraMaiuscula = letra_digitada.toUpperCase()
     letra_digitada = document.getElementById('letraDigitada').value = ""
+    letrasErradas=[]
 
     for(let l of ja_digitada){
         if(l == letraMaiuscula){
             alert('Essa letra ja foi digitada')
-        }else{
-            
         }
     }
 
@@ -73,6 +72,8 @@ function jogar() {
         if (!acertos) {
             erros++
             desenhaForca(erros);
+            
+            // document.querySelectorAll("#letrasDigitadas")
         } else if (acertos) {
             console.log(right);
             acertos = false;
@@ -132,7 +133,6 @@ function desenhaForca(erros) {
             break;
         case 7:
             $('#imgForco').attr('src','assets/erro7.png')
-            
             setTimeout(() => {iniciar()}, 4000)
             break;
         default:

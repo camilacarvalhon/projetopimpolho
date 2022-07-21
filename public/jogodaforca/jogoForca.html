@@ -48,7 +48,7 @@
                     <div class="offcanvas-body">
                         <ul class="text-center">
                             <li>Ano/Turma: 3º Ano</li>
-                            <li id="jogMemoria"> </li>
+                            <li id="jogMemoria"></li>
                             <li id="jogForca"></li>
                         </ul>
                     </div>
@@ -64,6 +64,8 @@
                     <button type="button" class=" btn" onclick="iniciar()">Sortear palavra</button>
                 </div>
                 <div class="forca text-center">
+                    <p id="letrasDigitadas"></p>
+                    
                     <img src="assets/forcaCompleta.png" alt="" id="imgForco">
                 </div>
                 <div class="palavraSorteada display" id="palavraSorteada">
@@ -87,14 +89,6 @@
                 
                     <div class="mensagemFinal" id="mensagemFinal"></div>
                     <div class="qtdLetraDigitada" id="qtdLetraDigitada"></div>
-                </div>
-                <div class="desenhaImagem">
-                    <img id="tetoLadoE" src="" alt="">
-                    <img id="tetoLadoD" src="" alt="">
-                    <img id="paredeLadoE" src="" alt="">
-                    <img id="paredeLadoD" src="" alt="">
-                    <img id="piso" src="" alt="">
-                    <img id="porta "src="" alt="">
                 </div>
             </div>
         </section>
@@ -128,7 +122,7 @@
     let jogos = JSON.parse(localStorage.getItem('nome_jogo'))
 
     for(let jogo of jogos){
-       console.log(jogo.nomejogo);
+      
        
        if(jogo.nomejogo.includes('memória')){
            $('#jogMemoria').text(jogo.nomejogo+ ' - ' + jogo.pontos)
