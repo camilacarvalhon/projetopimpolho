@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 
+
+body {
+    background-image: url('imgs/capa_jogo.svg');
+    background-repeat: no-repeat;
+}
+
 #nav_info{
     background-color: black; 
     font-family: 'Sniglet', cursive;   
@@ -31,7 +37,7 @@ p{
     border: 1px solid #013563;
     border-radius: 20px;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.4s;
     cursor: url('../assets/cursorBlue.png'), auto;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
     box-shadow: 0 0.3rem .8rem rgba(17, 17, 17, 0.3);
@@ -63,7 +69,7 @@ p{
     text-align: center;
 }
 .rodape #btReinicio{
-    color: #000;
+    color: #ffffff;
     font-family: 'Sniglet', cursive;
     background-color: #05ABC4;
     padding:.5rem!important;
