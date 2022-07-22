@@ -36,9 +36,9 @@ body {
     height: 2rem;
 }
 
-.display{
-    /* display: block; */
-}
+/* .display{
+    display: block;
+} */
 .jogoForca .forca, .palavraSorteada, .controleJogo{
     display: flex;
     justify-content: center;
