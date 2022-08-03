@@ -98,9 +98,13 @@
                 <div class="buttonsFooter  ">
                     <div class="buttonDica ms-2">
                         <a href=""><img src="../assets/iconeLamp.svg" alt="icone de uma lampada"></a>
+
+                        
                     </div>
                     <div class="buttonSom ms-2">
-                        <a href=""><img src="../assets/iconeSound.svg" alt="icone de audio"></a>
+                        <audio src="../assets/audioteste.m4a"></audio>
+                        <!-- <button id="btnSom"><img src="../assets/iconeSound.svg" alt="icone de audio"></button> -->
+                        <a><img src="../assets/iconeSound.svg" alt="icone de audio"></a>
                     </div>
                     <div class="buttonHome ms-2">
                         <a href="../pages/pag_acessar_estudante.html"><img src="../assets/iconeHome.svg"
@@ -131,5 +135,11 @@
            $('#jogForca').text(jogo.nomejogo+ ' - ' + jogo.pontos)
        }
     }
+
+    const button = document.getElementById("btnSom")
+    button.addEventListener('click', function(){
+        const audio = document.querySelector('audio')
+        audio.play()
+    })
 </script>
 </html>
