@@ -24,16 +24,15 @@ body {
     height: 200px;
     border-radius:10px;
     background-color: #DDDDDD!important;
+    font-family: 'Poppins';
 }
 .offcanvas .offcanvas-header h5{
     font-size: 1.2rem;
-    font-family:'Poppins';
     color: #013563;
 }
 .offcanvas .offcanvas-header button{
     border: none;
     background: none;
-
 }
 
 

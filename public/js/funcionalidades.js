@@ -188,8 +188,6 @@ function acessarProfessor() {
                 type: 'GET',
                 url: `${window.location.origin}/professor/${email}/${senha}`,
                 success: function (resposta) {
-
-                    alert(`Usuário ${resposta.nomeprof} está cadastrado!`);
                     window.location.href = "pag_acessar_professor.html";
                 },
                 error: function (resposta) {

@@ -82,3 +82,47 @@ p{
     transition: 0.5s;
 }
 
+
+.buttonsFooter .buttonDica button{
+    outline: none;
+    border: none;
+    background-color: #DDDDDD;
+    height: 60px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;      
+}
+.buttonsFooter .buttonDica button:hover{
+    background-color: #CCCCCC;
+    transition: 0.3s;
+}
+
+.buttonsFooter .buttonDica .offcanvas{
+    width: 100%!important;
+    height: 220px;
+    border-radius:0 0 5px 5px;
+    background-color: #ffffff!important;
+    font-family:'Poppins';
+}
+.buttonsFooter .buttonDica .offcanvas .offcanvas-body{
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+
+.buttonsFooter .buttonDica .offcanvas .offcanvas-header button{
+    border: none;
+    background: none;
+}
+
+@media (max-width: 575.98px) { 
+    .buttonsFooter .buttonDica button{
+        height: 60px;
+        width: 40px;
+       
+    }
+    .buttonsFooter  .buttonDica img{
+        height: 30px;
+        width: 60px;
+    }
+}

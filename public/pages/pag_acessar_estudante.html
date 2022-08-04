@@ -54,10 +54,9 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="text-center">
-                            <li>Ano/Turma: 3º Ano</li><hr width="90%" >
-                            <li id="jogMemoria"> </li><span id></span><hr width="90%" >
-                            <li id="jogForca"></li><hr width="90%" >
-                            <li> </li><hr width="90%" >
+                            <li>Ano/Turma: 3º Ano</li>
+                            <li id="jogMemoria" class="mt-3"></li>
+                            <li id="jogForca"></li>
                         </ul>
                     </div>
                 </div>
@@ -121,10 +120,10 @@
          for(let jogo of jogos){
             
             if(jogo.nomejogo.includes('memória')){
-                $('#jogMemoria').text(jogo.nomejogo+ ' - ' + jogo.pontos)
+                $('#jogMemoria').text(jogo.nomejogo+ ' : ' + jogo.pontos)
             }
             if(jogo.nomejogo.includes('complete')){
-                $('#jogForca').text(jogo.nomejogo+ ' - ' + jogo.pontos)
+                $('#jogForca').text(jogo.nomejogo+ ' : ' + jogo.pontos)
             }
          }
     </script>

@@ -48,7 +48,7 @@
                     <div class="offcanvas-body">
                         <ul class="text-center">
                             <li>Ano/Turma: 3º Ano</li>
-                            <li id="jogMemoria"></li>
+                            <li id="jogMemoria" class="mt-3"></li>
                             <li id="jogForca"></li>
                         </ul>
                     </div>
@@ -97,9 +97,23 @@
             <div class="footerPaginaAcessar">
                 <div class="buttonsFooter  ">
                     <div class="buttonDica ms-2">
-                        <a href=""><img src="../assets/iconeLamp.svg" alt="icone de uma lampada"></a>
 
-                        
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <img src="../assets/iconeLamp.svg" alt="icone de uma lampada">
+                        </button>
+
+                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                              <h3 id="offcanvasTopLabel" class="m-3 h2">Como jogar o jogo da forca?</h3>
+                              <button class="btn-close text-reset h2" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                            </div>
+                            <div class="offcanvas-body ms-4 h6 ">
+                                Para jogar o jogo da forca:<br>
+                                1º Você pode sortear uma palavra ao clicar no botão azul escrito "SORTEAR PALAVRA";<br>
+                                2º Clique no espaço em branco para inserir uma letra, logo abaixo de "DIGITE UMA LETRA";<br>
+                                3º Clique no botão jogar: Se a letra estiver correta, será inserida nos campos das letras; Se não estiver correta, será derrubada um elemento da CASINHA.
+                            </div>
+                          </div>
                     </div>
                     <div class="buttonSom ms-2">
                         <audio src="../assets/audioteste.m4a"></audio>
@@ -136,10 +150,10 @@
        }
     }
 
-    const button = document.getElementById("btnSom")
-    button.addEventListener('click', function(){
-        const audio = document.querySelector('audio')
-        audio.play()
-    })
+    // const button = document.getElementById("btnSom")
+    // button.addEventListener('click', function(){
+    //     const audio = document.querySelector('audio')
+    //     audio.play()
+    // })
 </script>
 </html>
