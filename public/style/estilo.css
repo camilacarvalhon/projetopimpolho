@@ -202,4 +202,18 @@ align-items: center;
 
 
 
+/* Estilo scroll */
 
+html::-webkit-scrollbar{
+    width: .5rem;
+  
+  }
+  
+  html::-webkit-scrollbar-track{
+    background-color: #ffffff;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+    background-color: #013563;
+    border-radius: 5rem;
+  }

@@ -12,7 +12,7 @@ body {
 }
 p{
     font-size: 25px;
-    padding: 2rem;
+    padding: 1.6rem;
 
 }
 .section_jogo{
@@ -67,6 +67,9 @@ p{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.rodape #pInfo{
+    font-size: 13.5pt;
 }
 .rodape #btReinicio{
     color: #ffffff;
