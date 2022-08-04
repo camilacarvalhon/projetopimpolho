@@ -97,7 +97,19 @@
             <div class="footerPaginaAcessar" >
                 <div class="buttonsFooter ">
                     <div class="buttonDica ms-2">
-                        <a href=""><img src="../assets/iconeLamp.svg" alt="icone de uma lampada"></a>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <img src="../assets/iconeLamp.svg" alt="icone de uma lampada">
+                        </button>
+                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                              <h3 id="offcanvasTopLabel" class="m-3 h2">Intruções de como jogar:</h3>
+                              <button class="btn-close text-reset h2" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                            </div>
+                            <div class="offcanvas-body ms-4 h6 ">
+                                - Para jogar o jogo da memória, clique no círculo verde.<br>
+                                - Para jogar o jogo da forca, clique no círculo vermelho.
+                            </div>
+                        </div>
                     </div>
                     <div class="buttonSom ms-2">
                         <a href=""><img src="../assets/iconeSound.svg" alt="icone de audio"></a>
