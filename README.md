@@ -6,7 +6,7 @@
     * [Autores](#Autores)
 
 ## Sobre o Projeto
-Repositório criado para o desenvolvimento do projeto pimpolho para a disciplina de TCC.
+Repositório criado para o desenvolvimento do projeto pimpolho.
 
 ### Dependências 
 
